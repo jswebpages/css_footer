@@ -4,6 +4,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -184,6 +185,27 @@ section {
 	margin: 0;
 }
 
+/* Two Column */
+/* Create two equal columns that floats next to each other */
+.row{border-top: 5px solid black;}
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 30px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+ .about{text-align: left;} 
+  
+
+
 /* Footer Center */
 
 .footer_content{
@@ -192,6 +214,7 @@ section {
     position: relative;
     background: #fff;
     top: 600px;
+    padding-top: 30px;
 }
 
 .footer-distributed .footer-center{
@@ -315,3 +338,11 @@ section {
 	}
 
 }
+
+
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
